@@ -1,4 +1,4 @@
-# iockerpty: util.py
+# dockerpty: util.py
 #
 # Copyright 2014 Chris Corbyn <chris@w3style.co.uk>
 #
