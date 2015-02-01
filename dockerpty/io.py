@@ -194,7 +194,7 @@ class Demuxer(object):
         if size <= 0:
             return
         else:
-            data = bytes() if six.PY3 else str()
+            data = six.binary_type()
             while len(data) < size:
                 nxt = self.stream.read(size - len(data))
                 if not nxt:

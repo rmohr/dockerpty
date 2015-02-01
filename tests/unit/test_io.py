@@ -134,10 +134,7 @@ class TestDemuxer(object):
             b"\x01\x00\x00\x00\x00\x00\x00\x03foo",
             b"\x01\x00\x00\x00\x00\x00\x00\x01d",
         ]
-        if six.PY3:
-            return BytesIO(bytes().join(chunks))
-        else:
-            return StringIO(u''.join(chunks))
+        return six.BytesIO(six.binary_type().join(chunks))
 
     def test_fileno_delegates_to_stream(self):
         demuxer = io.Demuxer(sys.stdout)

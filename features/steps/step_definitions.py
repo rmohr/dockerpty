@@ -114,8 +114,7 @@ def step_impl(ctx, rows, cols):
 
 @when('I type "{text}"')
 def step_impl(ctx, text):
-    util.write(ctx.pty, text.encode() if six.PY3 else text)
-
+    util.write(ctx.pty, text.encode())
 
 @when('I press {key}')
 def step_impl(ctx, key):
